@@ -72,7 +72,7 @@ for key in List.keys():
 f.write('\n''---------- 6 страница ----------''\n')
 table6, head6= m.str6()
 f.write("Учет занятий"+'\n')
-f.write(str(head6)+'\n')
+f.write(str(head6)+' \n')
 for k in table6[head6].keys():
     for i in range(len(table6[head6][k])):
         f.write(table6[head6][k][i])
