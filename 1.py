@@ -7,6 +7,11 @@ for l in tit.keys():
         f.write('\n\n\n')
     f.write(tit[l]['tit'])
     f.write('\n')
+f.write('\n''---------- 2 страница ----------''\n\n\n')
+tit2=m.str2()
+for k in tit2.keys():
+    f.write(tit2[k]['tit2'])
+    f.write('\n')
 f.write('\n\n\n''---------- 3 страница ----------''\n\n\n')
 book = m.str3()
 f.write(book[-1]['head'])
@@ -63,5 +68,13 @@ for key in List.keys():
         else:
             f.write("\t")
             f.write(List[key][i]+"\t\t")
+    f.write('\n')
+f.write('\n''---------- 6 страница ----------''\n')
+table6, head6= m.str6()
+f.write("Учет занятий"+'\n')
+f.write(str(head6)+'\n')
+for k in table6[head6].keys():
+    for i in range(len(table6[head6][k])):
+        f.write(table6[head6][k][i])
     f.write('\n')
 f.close()
