@@ -1,14 +1,15 @@
 import modul1 as m
+
 f = open('journal1.txt', 'w')
 f.write('\n''---------- 1 страница ----------''\n\n\n')
-tit=m.str1()
-for l in tit.keys():
-    if l=='str2'or l=='str3'or l=='str5':
+tit = m.str1()
+for i in tit.keys():
+    if i == 'str2' or i == 'str3' or i == 'str5':
         f.write('\n\n\n')
-    f.write(tit[l]['tit'])
+    f.write(tit[i]['tit'])
     f.write('\n')
 f.write('\n''---------- 2 страница ----------''\n\n\n')
-tit2=m.str2()
+tit2 = m.str2()
 for k in tit2.keys():
     f.write(tit2[k]['tit2'])
     f.write('\n')
@@ -19,9 +20,9 @@ f.write(book[0]['title'])
 f.write('\n')
 k = -2
 for i in book.keys():
-    k=k+1
-    if i>0:
-        if k<10:
+    k = k + 1  # проелы до и после знака операции
+    if i > 0:
+        if k < 10:
             f.write('    ')
             f.write(str(k))
             f.write('        ')
@@ -53,26 +54,26 @@ for key in tab.keys():
 f.write('\n''---------- 5 страница ----------''\n\n\n')
 Attendance_accounting, List = m.str5()
 for key in Attendance_accounting.keys():
-    f.write(key+" ")
+    f.write(key + " ")
     for i in range(len(Attendance_accounting[key])):
-        f.write(str(Attendance_accounting[key][i])+" ")
+        f.write(str(Attendance_accounting[key][i]) + " ")
     if key != '№ п.п.\ Дата':
         f.write('\n')
 for key in List.keys():
-    f.write(str(key) +"\t")
+    f.write(str(key) + "\t")
     for i in range(len(List[key])):
         if i == 0:
             f.write("\t" + List[key][i] + "\t")
-        elif (i!=len(List[key])-2):
-            f.write(List[key][i]+"\t")
+        elif i != len(List[key]) - 2:
+            f.write(List[key][i] + "\t")
         else:
             f.write("\t")
-            f.write(List[key][i]+"\t\t")
+            f.write(List[key][i] + "\t\t")
     f.write('\n')
 f.write('\n''---------- 6 страница ----------''\n')
-table6, head6= m.str6()
-f.write("Учет занятий"+'\n')
-f.write(str(head6)+' \n')
+table6, head6 = m.str6()
+f.write("Учет занятий" + '\n')
+f.write(str(head6) + ' \n')
 for k in table6[head6].keys():
     for i in range(len(table6[head6][k])):
         f.write(table6[head6][k][i])
