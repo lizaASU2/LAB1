@@ -1,5 +1,5 @@
 import modul1 as m
-
+#  лаба сдана
 f = open('journal1.txt', 'w')
 f.write('\n''---------- 1 страница ----------''\n\n\n')
 tit = m.str1()
